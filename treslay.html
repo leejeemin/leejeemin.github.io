@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <title>Lee Jeemin</title>
+        <style>
+            @font-face {
+                font-family: 'superposition-couleur3';
+                src: url('font/superposition-couleur-3-webfont.eot');
+                src: url('font/superposition-couleur-3-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('font/superposition-couleur-3-webfont.woff2') format('woff2'),
+                    url('font/superposition-couleur-3-webfont.woff') format('woff'),
+                    url('font/superposition-couleur-3-webfont.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'superposition-couleur2';
+                src: url('font/superposition-couleur-2-webfont.eot');
+                src: url('font/superposition-couleur-2-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('font/superposition-couleur-2-webfont.woff2') format('woff2'),
+                    url('font/superposition-couleur-2-webfont.woff') format('woff'),
+                    url('font/superposition-couleur-2-webfont.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'superposition-couleur1';
+                src: url('font/superposition-couleur-1-webfont.eot');
+                src: url('font/superposition-couleur-1-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('font/superposition-couleur-1-webfont.woff2') format('woff2'),
+                    url('font/superposition-couleur-1-webfont.woff') format('woff'),
+                    url('font/superposition-couleur-1-webfont.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'superposition3';
+                src: url('font/superposition-3-webfont.eot');
+                src: url('font/superposition-3-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('font/superposition-3-webfont.woff2') format('woff2'),
+                    url('font/superposition-3-webfont.woff') format('woff'),
+                    url('font/superposition-3-webfont.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'superposition2';
+                src: url('font/superposition-2-webfont.eot');
+                src: url('font/superposition-2-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('font/superposition-2-webfont.woff2') format('woff2'),
+                    url('font/superposition-2-webfont.woff') format('woff'),
+                    url('font/superposition-2-webfont.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'superposition1';
+                src: url('font/superposition-1-webfont.eot');
+                src: url('font/superposition-1-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('font/superposition-1-webfont.woff2') format('woff2'),
+                    url('font/superposition-1-webfont.woff') format('woff'),
+                    url('font/superposition-1-webfont.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+
+            body{
+                background-color: white;
+                overflow-x: hidden;
+                //height: 59.03vw;
+                height: 580vw;
+            }
+
+            #backinfo{
+                position: fixed;
+                display: none;
+                top: 0vw;
+                left: 0vw;
+                width: 100%;
+                height: 4.5vw;
+                opacity: 0.2;
+                background-color: white;
+                z-index: 4;
+            }
+
+            #logo{
+                position: fixed;
+                top: 2vw;
+                left: 4vw;
+                z-index: 5;
+                cursor: pointer;
+                font-family:arimo;
+                font-size: 2.2vw;
+                color: black;
+                font-weight: 400;
+                opacity:1;
+                transition: all 0.3s ease;
+            }
+
+            #logo:hover{
+                opacity:0.7;
+            }
+            
+            #logo img{
+                width: 4.5vw;
+            }
+
+            #info{
+                position: fixed;
+                top: 2vw;
+                left: 72vw;
+                font-family:Poppins;
+                font-size: 1vw;
+                color: black;
+                font-weight: 400;
+                z-index: 5;
+                cursor: cell;
+                transition: all 0.3s ease;
+            }
+            #info:hover{
+                opacity:0.5;
+            }
+
+            #info-1{
+                position: fixed;
+                top: 5vw;
+                left: 75vw;
+                width: 23vw;
+                font-family:Poppins;
+                font-size: 1.6vw;
+                text-align: left;
+                //font-style: italic;
+                color: black;
+                font-weight: 500;
+                z-index: 5;
+                transition: all 0.4s ease;
+                opacity: 0;
+            }
+
+
+            #prev{
+                position: fixed;
+                top: 23vw;
+                left: 3vw;
+                font-family: noto sans;
+                font-size: 10vw;
+                color: gainsboro;
+                //font-weight: bold;
+                z-index: 5;
+                cursor: pointer;
+                opacity: 0.2;
+                transition: all 0.2s ease;
+            }
+            #next{
+                position: fixed;
+                top: 23vw;
+                left: 92vw;
+                font-family: noto sans;
+                font-size: 10vw;
+                color: gainsboro;
+                //font-weight: bold;
+                z-index: 5;
+                cursor: pointer;
+                opacity: 0.2;
+                transition: all 0.2s ease;
+            }
+            #up{
+                position: fixed;
+                top: 94%;
+                left: 93%;
+                width: 4vw;
+                height: 4vw;
+                text-align: center;
+                font-family: noto sans;
+                font-size: 3vw;
+                color: black;
+                font-weight: bold;
+                z-index: 5;
+                cursor: pointer;
+                opacity: 0.8;
+                transition: all 0.3s ease;
+            }
+
+            #up:hover{
+                background-color: whitesmoke;
+                opacity: 0.7;
+            }
+
+            
+            #prev:hover{
+                opacity: 0.6;
+            }
+
+            #next:hover{
+                opacity: 0.6;
+            }
+
+            #keyword{
+                position: absolute;
+                top: 10.5vw;
+                left: 20vw;
+                font-family: Poppins;
+                font-size: 1vw;
+                color: dodgerblue;
+                font-weight: 400;
+                z-index: 2;
+            }
+
+
+            #text1{
+                position: absolute;
+                top: 14vw;
+                left: 20vw;
+                font-family:Poppins;
+                font-size: 6vw;
+                color: black;
+                font-weight: bold;
+                z-index: 2;
+            }
+
+            #text2{
+                position: absolute;
+                top: 26vw;
+                left: 20vw;
+                width: 45vw;
+                font-family:Poppins;
+                font-size: 1.5vw;
+                color: black;
+                line-height: 1.6;
+                //letter-spacing:0.1vw;
+                font-weight:200;
+                z-index: 2;
+            }
+
+            #text2-1{
+                position: absolute;
+                top: 48vw;
+                left: 20vw;
+                width: 50vw;
+                font-family:Poppins;
+                font-size: 0.8vw;
+                color: black;
+                line-height: 1.7;
+                z-index: 2;
+                font-weight: 600;
+            }
+
+            #imgt{
+                position: absolute;
+                top:73vw;
+                left: 0vw;
+            }
+            #imgt img{
+                width: 100%;
+            }
+
+            .text0{
+                position: absolute;
+                left: 7vw;
+                font-family:Poppins;
+                font-size: 1.3vw;
+                color: black;
+                //font-weight: bold;
+                z-index: 2;
+            }
+
+
+            #text3{
+                top: 150vw;
+            }
+
+            #text4{
+                top: 230vw;
+            }
+
+            #text5{
+                top: 480vw;
+                opacity: 0;
+                left: 10vw;
+                font-size: 1vw;
+            }
+
+            
+           
+            #part1{
+                position: absolute;
+                top: 235vw;
+                left: 17vw;
+                z-index: -2;
+            }
+
+            #img1{
+                width: 65vw;
+            }
+
+            #part2{
+                position: absolute;
+                top: 139vw;
+                left: 0vw;
+                z-index: -2;
+                //border: 1px solid black;
+            }
+
+            #img2{
+                width: 100%;
+            }
+
+
+             #backpart{
+                position: absolute;
+                top: 478vw;
+                left: 7vw;
+                 width: 86vw;
+                 height: 100vw;
+                z-index: -2;
+                background-color: whitesmoke;
+            }
+            
+            #part9{
+                position: absolute;
+                top: 488vw;
+                left: 13vw;
+                z-index: -2;
+            }
+
+            #part9 img{
+                width: 35vw;
+            }
+
+            #part10{
+                position: absolute;
+                top: 488vw;
+                left: 52vw;
+                z-index: -2;
+            }
+
+            #part10 img{
+                width: 35vw;
+            }
+
+
+            #part5{
+                position: absolute;
+                top: 515vw;
+                left: 13vw;
+                z-index: -2;
+            }
+
+            #part5 img{
+                width: 35vw;
+            }
+
+            #part6{
+                position: absolute;
+                top: 515vw;
+                left: 52vw;
+                z-index: -2;
+            }
+
+            #part6 img{
+                width: 35vw;
+            }
+
+            #part7{
+                position: absolute;
+                top: 542vw;
+                left: 13vw;
+                z-index: -2;
+            }
+
+            #part7 img{
+                width: 35vw;
+            }
+
+            #part8{
+                position: absolute;
+                top: 542vw;
+                left: 52vw;
+                z-index: -2;
+            }
+
+            #part8 img{
+                width: 35vw;
+            }
+
+
+
+
+            #bloc{
+                position: absolute;
+                top: 0vw;}
+
+            #bloc1 {
+                position: absolute;
+                top:6.94vw;
+                left:1.04vw;
+                transform:rotate(-80deg);
+                transition: all 0.4s ease;
+            }
+            #bloc2 {
+                position: absolute;
+                top:0.69vw;
+                left:32.29vw;
+                transition: all 0.4s ease;
+            }
+            #bloc2-2 {
+                position: absolute;
+                top:60vw;
+                left:28.13vw;
+                transition: all 0.4s ease;
+            }
+            #bloc3 {
+                position: absolute;
+                top:-3.47vw;
+                left:53.13vw;
+                transform:rotate(-40deg);
+                transition: all 0.4s ease;
+            }
+            #bloc4 {
+                position: absolute;
+                top:-5.56vw;
+                left:11.46vw;
+                transform:rotate(38deg);
+            }
+            #bloc5 {
+                position: absolute;
+                top:3.2vw;
+                left:18.40vw;
+                transform:rotate(-70deg);
+                transition: all 0.4s ease;
+            }
+            #bloc6 {
+                position: absolute;
+                top:1.39vw;
+                left:39.24vw;
+                transform:rotate(58deg);
+                transition: all 0.4s ease;
+            }
+            #bloc1-1 {
+                position: absolute;
+                top:1.39vw;
+                left:60.07vw;
+                transform:rotate(10deg);
+                transition: all 0.4s ease;
+            }
+
+            #bloc2-1 {
+                position: absolute;
+                top:6.94vw;
+                left:46.18vw;
+                transition: all 0.4s ease;
+            }
+            #bloc3-1 {
+                position: absolute;
+                top:20.83vw;
+                left:90.28vw;
+                transform:rotate(-18deg);
+                transition: all 0.4s ease;
+            }
+            #bloc4-1 {
+                position: absolute;
+                top:0.00vw;
+                left:72.92vw;
+                transform:rotate(18deg);
+            }
+            #bloc5-1 {
+                position: absolute;
+                top:6.94vw;
+                left:93.75vw;
+                transform:rotate(40deg);
+            }
+            #bloc6-1 {
+                position: absolute;
+                top:2.08vw;
+                left:87.85vw;
+                transform:rotate(-50deg);
+                transition: all 0.4s ease;
+            }
+            #bloc1-2 {
+                position: absolute;
+                top:27.78vw;
+                left:0.35vw;
+                transform:rotate(80deg);
+                transition: all 0.4s ease;
+            }
+            #bloc3-2 {
+                position: absolute;
+                top:41.67vw;
+                left:39.24vw;
+                transform:rotate(38deg);
+                transition: all 0.4s ease;
+            }
+            #bloc4-2 {
+                position: absolute;
+                top:34.72vw;
+                left:-4.51vw;
+                transform:rotate(90deg);
+            }
+            #bloc5-2 {
+                position: absolute;
+                top:52vw;
+                left:4.51vw;
+                transform:rotate(80deg);
+            }
+            #bloc6-2 {
+                position: absolute;
+                top:47.22vw;
+                left:76.39vw;
+                transform:rotate(18deg);
+                transition: all 0.4s ease;
+            }
+            #bloc1-3 {
+                position: absolute;
+                top:41.67vw;
+                left:90.28vw;
+                transform:rotate(180deg);
+                transition: all 0.4s ease;
+            }
+            #bloc2-3 {
+                position: absolute;
+                top:20.83vw;
+                left:3.47vw;
+            }
+            #bloc2-4 {
+                position: absolute;
+                top:55.56vw;
+                left:52.08vw;
+            }
+            #bloc3-3 {
+                position: absolute;
+                top:48.61vw;
+                left:67.01vw;
+                transition: all 0.4s ease;
+            }
+            #bloc4-3 {
+                position: absolute;
+                top:48.61vw;
+                left:11.46vw;
+            }
+            #bloc5-3 {
+                position: absolute;
+                top:16.67vw;
+                left:8.33vw;
+                transform:rotate(-18deg);
+                transition: all 0.4s ease;
+            }
+            #bloc6-3 {
+                position: absolute;
+                top:48.61vw;
+                left:25.35vw;
+                transform:rotate(-30deg);
+                transition: all 0.4s ease;
+            }
+            #bloc6-4 {
+                position: absolute;
+                top:-2.08vw;
+                left:-0.69vw;
+                transform:rotate(-50deg);
+                z-index: -1;
+                transition: all 0.4s ease;
+            }
+            #bloc6-5 {
+                position: absolute;
+                top:48.61vw;
+                left:87.85vw;
+                transform:rotate(-30deg);
+                transition: all 0.4s ease;
+            }
+            #bloc6-6 {
+                position: absolute;
+                top:-2.08vw;
+                left:97.22vw;
+                transform:rotate(-100deg);
+                transition: all 0.4s ease;
+            }
+            #bloc6-7 {
+                position: absolute;
+                top:52.78vw;
+                left:60.07vw;
+                transform:rotate(130deg);
+                transition: all 0.4s ease;
+            }
+            #bloc6-8 {
+                position: absolute;
+                top:46.53vw;
+                left:-0.21vw;
+                transform:rotate(-30deg);
+                transition: all 0.4s ease;
+            }
+            #bloc6-9 {
+                position: absolute;
+                top:-4.86vw;
+                left:74.31vw;
+                transform:rotate(-30deg);
+                transition: all 0.4s ease;
+            }
+            #bloc6-10 {
+                position: absolute;
+                top:41.67vw;
+                left:69.79vw;
+                transform:rotate(-30deg);
+                transition: all 0.4s ease;
+            }
+            #bloc1-4 {
+                position: absolute;
+                top:17.36vw;
+                left:96.18vw;
+                transform:rotate(-30deg);
+                transition: all 0.4s ease;
+            }
+            #bloc1 img {
+                width:8.33vw
+            }
+            #bloc2 img {
+                width:3.47vw
+            }
+            #bloc2-2 img {
+                width:3.47vw
+            }
+            #bloc3 img {
+                width:3.47vw
+            }
+            #bloc4 img {
+                width:10.07vw
+            }
+            #bloc5 img {
+                width:4.86vw
+            }
+            #bloc6 img {
+                width:4.17vw
+            }
+            #bloc1-1 img {
+                width:8.33vw
+            }
+            #bloc2-1 img {
+                width:3.47vw
+            }
+            #bloc3-1 img {
+                width:3.47vw
+            }
+            #bloc4-1 img {
+                width:10.07vw
+            }
+            #bloc5-1 img {
+                width:4.86vw
+            }
+            #bloc6-1 img {
+                width:4.17vw
+            }
+            #bloc1-2 img {
+                width:8.33vw
+            }
+            #bloc2-3 img {
+                width:3.47vw
+            }
+            #bloc3-2 img {
+                width:3.47vw
+            }
+            #bloc4-2 img {
+                width:10.07vw
+            }
+            #bloc5-2 img {
+                width:4.86vw
+            }
+            #bloc6-2 img {
+                width:4.17vw
+            }
+
+            #bloc1-3 img {
+                width:8.33vw
+            }
+            #bloc1-4 img {
+                width:8.33vw
+            }
+            #bloc2-4 img {
+                width:3.47vw
+            }
+            #bloc3-3 img {
+                width:3.47vw
+            }
+            #bloc4-3 img {
+                width:10.07vw
+            }
+            #bloc5-3 img {
+                width:4.86vw
+            }
+            #bloc6-3 img {
+                width:4.17vw
+            }
+
+            #bloc6-4 img {
+                width:4.17vw
+            }
+            #bloc6-5 img {
+                width:4.17vw
+            }
+            #bloc6-6 img {
+                width:4.17vw
+            }
+            #bloc6-7 img {
+                width:4.17vw
+            }
+            #bloc6-8 img {
+                width:4.17vw
+            }
+            #bloc6-9 img {
+                width:4.17vw
+            }
+            #bloc6-10 img {
+                width:4.17vw
+            }
+
+            #myframe{
+                position: absolute;
+                top:420vw;
+                left:7vw;
+                width: 86vw;
+                height: 50vw;
+                z-index: 5;
+                //border: 0.01vw solid gray;
+                //border-radius: 1%;
+                box-shadow: 0px 0px 5px 1px lightgray;
+
+            }
+            
+            #myframe:hover{box-shadow: 3px 3px 9px 5px lightgray;}
+
+            .work{
+                position:absolute; 
+                top:600vw;
+                margin-left: 5vw;
+                width: 90vw;
+            }
+
+            .workimg1 img{
+                width:45%;
+                margin: 1vw;
+                float: left;
+                    margin-bottom: 1vw;
+            }
+
+        </style>
+    </head>
+
+
+    <body>
+
+        <iframe id="myframe" src="treslay_test.html" frameborder=0 framespacing=0 marginheight=0 marginwidth=0 vspace=0></iframe>
+
+        <div id="backinfo"></div>
+        <div id="logo" onclick="window.location.href='main.html'"><img src="source/jmlogo.png" ></div>
+        <div id="info" onmouseover="int1()" onmouseout="int2()">LEE Jeemin &emsp;&emsp;&emsp;&emsp;jeemin.design@gmail.com</div>
+        <div id="info-1">Designer graphique - <br>Communication visuelle,<br>UI design, Typographie. J'explore le langage visuel et le data visualisation. </div>
+
+        <div id="prev" onclick="window.location.href='valeurs.html'">❮</div>
+        <div id="next" onclick="window.location.href='syntaxe.html'">❯</div>
+
+        <div id="up" onclick="scrollWin()">↑</div>
+
+        <div id="keyword"># Typographie &emsp;  # Graphisme &emsp; # UI Design</div>
+        <div id="text1">Treslay</div>
+
+        <div id="text2">Treslay est une police de caractères superposables<br>et une conception polychromatique.
+            <br>Le caractère est composé de trois couches,<br>combinant six formes différentes.<br>Avec ses trois couches décomposées,<br>on peut créer de nombreuses typographies <br>en superposition.</div>
+
+        <div id="text2-1">Février 2020 &emsp;&emsp;&emsp; Glyphs&emsp;|&emsp;Adobe Indesign&emsp;|&emsp;Adobe Photoshop&emsp;|&emsp;HTML CSS Java</div>
+
+        <div id="imgt"><img src=source/t-DSC_0078.jpg></div>
+
+        <div class="text0" id="text3"></div>
+        <div class="text0" id="text4"></div>
+
+        <div class="text0" id="text5"></div>
+
+        <div id="part1"><img id="img1" src="source/treslayimg1.jpg"></div>
+
+        <div id="part2"><img id="img2" src="source/treslayimg5.jpg"></div>
+
+        <div id="backpart"></div>
+
+        <div id="part5"><img src="source/ex3.png"></div>
+        <div id="part6"><img src="source/ex4.png"></div>
+        <div id="part7"><img src="source/ex5.png"></div>
+        <div id="part8"><img src="source/ex6.png"></div>
+        <div id="part9"><img src="source/ex7.png"></div>
+        <div id="part10"><img src="source/ex8.png"></div>
+
+        
+        <div class="work">
+
+
+            <div class="workimg1">
+                <img src="source/treslayposter01.jpg">
+            </div>
+
+            <div class="workimg1">
+                <img src="source/treslayposter02.jpg">
+            </div>
+
+            <div class="workimg1">
+                <img src="source/treslayposter03.jpg">
+            </div>
+            
+             <div class="workimg1">
+                <img src="source/DSC_0233.jpg">
+            </div>
+            
+            <div class="workimg1">
+                <img src="source/DSC_0232.jpg">
+            </div>
+            <div class="workimg1">
+                <img src="source/DSC_0231.jpg">
+            </div>
+            
+            <div class="workimg1">
+                <img src="source/DSC_0242.jpg">
+            </div>
+            <div class="workimg1">
+                <img src="source/DSC_0243.jpg">
+            </div>
+
+            <div class="workimg1">
+                <img src="source/DSC_0057.gif">
+            </div>
+
+            <div class="workimg1">
+                <img src="source/DSC_0064.jpg">
+            </div>
+            
+            <div class="workimg1">
+                <img src="source/DSC_0223.jpg">
+            </div>
+            
+            <div class="workimg1">
+                <img src="source/DSC_0228.jpg">
+            </div>
+            
+            
+           
+            <div class="workimg1">
+                <img src="source/DSC_0071.jpg">
+            </div>
+            <div class="workimg1">
+                <img src="source/DSC_0074.jpg">
+            </div>
+            <div class="workimg1">
+                <img src="source/DSC_0229.jpg">
+            </div>
+            
+            
+           
+        </div>
+        
+
+
+        <div id="bloc">
+            <div id="bloc1"><img src="source/treslaypc1.png"></div>
+            <div id="bloc2"><img src="source/treslaypc2.png"></div>
+            <div id="bloc2-2"><img src="source/treslaypc2-1.png"></div>
+            <div id="bloc3"><img src="source/treslaypc3.png"></div>
+            <div id="bloc4"><img src="source/treslaypc4.png"></div>
+            <div id="bloc5"><img src="source/treslaypc5.png"></div>
+            <div id="bloc6"><img src="source/treslaypc6.png"></div>
+
+            <div id="bloc1-1"><img src="source/treslaypc1-1.png"></div>
+            <div id="bloc2-1"><img src="source/treslaypc2-1.png"></div>
+            <div id="bloc3-1"><img src="source/treslaypc3.png"></div>
+            <div id="bloc4-1"><img src="source/treslaypc4-1.png"></div>
+            <div id="bloc5-1"><img src="source/treslaypc5-1.png"></div>
+            <div id="bloc6-1"><img src="source/treslaypc6-2.png"></div>
+
+            <div id="bloc1-2"><img src="source/treslaypc1.png"></div>
+            <div id="bloc2-3"><img src="source/treslaypc2.png"></div>
+            <div id="bloc3-2"><img src="source/treslaypc3-1.png"></div>
+            <div id="bloc4-2"><img src="source/treslaypc4-1.png"></div>
+            <div id="bloc5-2"><img src="source/treslaypc5.png"></div>
+            <div id="bloc6-2"><img src="source/treslaypc6.png"></div>
+
+            <div id="bloc1-4"><img src="source/treslaypc1.png"></div>
+            <div id="bloc1-3"><img src="source/treslaypc1-1.png"></div>
+            <div id="bloc2-4"><img src="source/treslaypc2-1.png"></div>
+            <div id="bloc3-3"><img src="source/treslaypc3-1.png"></div>
+            <div id="bloc4-3"><img src="source/treslaypc4-1.png"></div>
+            <div id="bloc5-3"><img src="source/treslaypc5-1.png"></div>
+            <div id="bloc6-3"><img src="source/treslaypc6-1.png"></div>
+
+            <div id="bloc6-4"><img src="source/treslaypc6-2.png"></div>
+            <div id="bloc6-5"><img src="source/treslaypc6-1.png"></div>
+            <div id="bloc6-6"><img src="source/treslaypc6-2.png"></div>
+            <div id="bloc6-7"><img src="source/treslaypc6.png"></div>
+            <div id="bloc6-8"><img src="source/treslaypc6.png"></div>
+            <div id="bloc6-9"><img src="source/treslaypc6-1.png"></div>
+            <div id="bloc6-10"><img src="source/treslaypc6-2.png"></div>
+            <div id="backbg"></div>
+        </div>
+
+    </body>
+
+
+
+    <script>
+
+        function changeIframeUrl(url){
+            document.getElementById("myframe").src = url;
+        }
+
+        function int1(){
+            document.getElementById("info-1").style.opacity="1";
+        }
+
+        function int2(){
+            document.getElementById("info-1").style.opacity="0";
+        }
+
+
+        function scrollWin() {
+            window.scrollTo(0,0);
+        }
+
+        window.onscroll = function() {myFunction()};
+
+        function myFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                document.getElementById("logo").style.opacity = "0.1";
+                document.getElementById("info").style.opacity = "0.1";
+            } else {
+                document.getElementById("logo").style.opacity = "1";
+                document.getElementById("info").style.opacity = "1";
+            }
+        }
+
+
+        window.addEventListener("mousemove", Clic);
+        function Clic(evenementpointeur){
+            if(window.innerHeight/2 < evenementpointeur.clientY){
+                document.getElementById("bloc5").style.transform="rotate(-90deg)";
+                document.getElementById("bloc5-3").style.transform="rotate(-90deg)";
+                document.getElementById("bloc3").style.transform="rotate(0deg)";
+                document.getElementById("bloc5").style.top="18.2vw";
+                document.getElementById("bloc5-3").style.top="18.2vw";
+                document.getElementById("bloc3").style.top="20.06vw";
+                document.getElementById("bloc5").style.left="11.11vw";
+                document.getElementById("bloc5-3").style.left="13.89vw";
+                document.getElementById("bloc3").style.left="13.19vw";
+                document.getElementById("bloc5").style.mixBlendMode="multiply";
+                document.getElementById("bloc5-3").style.mixBlendMode="multiply";
+                document.getElementById("bloc3").style.mixBlendMode="multiply"; 
+
+                document.getElementById("bloc3-2").style.transform="rotate(0deg)"; 
+                document.getElementById("bloc1").style.transform="rotate(-90deg)"; 
+                document.getElementById("bloc6").style.transform="rotate(135deg)"; 
+                document.getElementById("bloc3-2").style.top="20.06vw"; 
+                document.getElementById("bloc2").style.top="20.40vw"; 
+                document.getElementById("bloc2-1").style.top="26.31vw"; 
+                document.getElementById("bloc1").style.top="21.10vw"; 
+                document.getElementById("bloc6").style.top="27.69vw";
+                document.getElementById("bloc3-2").style.left="20.83vw"; 
+                document.getElementById("bloc2").style.left="22.22vw"; 
+                document.getElementById("bloc2-1").style.left="22.22vw"; 
+                document.getElementById("bloc1").style.left="23.96vw"; 
+                document.getElementById("bloc6").style.left="25.69vw";
+                document.getElementById("bloc3-2").style.mixBlendMode="multiply"; 
+                document.getElementById("bloc2").style.mixBlendMode="multiply"; 
+                document.getElementById("bloc2-1").style.mixBlendMode="multiply"; 
+                document.getElementById("bloc1").style.mixBlendMode="multiply"; 
+                document.getElementById("bloc6").style.mixBlendMode="multiply"; 
+
+                document.getElementById("bloc6-1").style.transform="rotate(-90deg)"; 
+                document.getElementById("bloc6-2").style.transform="rotate(-90deg)"; 
+                document.getElementById("bloc6-3").style.transform="rotate(-90deg)"; 
+                document.getElementById("bloc3-3").style.top="20.06vw"; 
+                document.getElementById("bloc6-1").style.top="17.97vw"; 
+                document.getElementById("bloc6-2").style.top="23.88vw"; 
+                document.getElementById("bloc6-3").style.top="29.43vw"; 
+                document.getElementById("bloc3-3").style.left="32.64vw"; 
+                document.getElementById("bloc6-1").style.left="36.46vw"; 
+                document.getElementById("bloc6-2").style.left="36.46vw"; 
+                document.getElementById("bloc6-3").style.left="36.46vw"; 
+                document.getElementById("bloc3-3").style.mixBlendMode="multiply"; 
+                document.getElementById("bloc6-1").style.mixBlendMode="multiply"; 
+                document.getElementById("bloc6-2").style.mixBlendMode="multiply"; 
+                document.getElementById("bloc6-3").style.mixBlendMode="multiply"; 
+
+                document.getElementById("bloc1-1").style.transform="rotate(110deg)"; 
+                document.getElementById("bloc1-2").style.transform="rotate(-90deg)"; 
+                document.getElementById("bloc1-3").style.transform="rotate(20deg)"; 
+                document.getElementById("bloc2-2").style.top="20.40vw"; 
+                document.getElementById("bloc1-1").style.top="20.75vw"; 
+                document.getElementById("bloc1-2").style.top="27.69vw"; 
+                document.getElementById("bloc1-3").style.top="29.78vw"; 
+                document.getElementById("bloc2-2").style.left="50.00vw"; 
+                document.getElementById("bloc1-1").style.left="44.10vw"; 
+                document.getElementById("bloc1-2").style.left="47.22vw"; 
+                document.getElementById("bloc1-3").style.left="43.75vw"; 
+                document.getElementById("bloc2-2").style.mixBlendMode="multiply"; 
+                document.getElementById("bloc1-1").style.mixBlendMode="multiply"; 
+                document.getElementById("bloc1-2").style.mixBlendMode="multiply"; 
+                document.getElementById("bloc1-3").style.mixBlendMode="multiply"; 
+
+                document.getElementById("bloc3-1").style.transform="rotate(0deg)"; 
+                document.getElementById("bloc6-4").style.transform="rotate(90deg)"; 
+                document.getElementById("bloc3-1").style.top="20.06vw"; 
+                document.getElementById("bloc6-4").style.top="29.43vw"; 
+                document.getElementById("bloc3-1").style.left="55.90vw"; 
+                document.getElementById("bloc6-4").style.left="60.07vw"; 
+                document.getElementById("bloc3-1").style.mixBlendMode="multiply"; 
+                document.getElementById("bloc6-4").style.mixBlendMode="multiply"; 
+
+                document.getElementById("bloc1-4").style.transform="rotate(180deg)"; 
+                document.getElementById("bloc6-5").style.transform="rotate(-180deg)"; 
+                document.getElementById("bloc6-6").style.transform="rotate(-85deg)"; 
+                document.getElementById("bloc6-7").style.transform="rotate(180deg)"; 
+                document.getElementById("bloc1-4").style.top="20.06vw"; 
+                document.getElementById("bloc6-5").style.top="27.00vw"; 
+                document.getElementById("bloc6-6").style.top="22.97vw"; 
+                document.getElementById("bloc6-7").style.top="27.00vw"; 
+                document.getElementById("bloc1-4").style.left="69.10vw"; 
+                document.getElementById("bloc6-5").style.left="75.00vw"; 
+                document.getElementById("bloc6-6").style.left="71.32vw"; 
+                document.getElementById("bloc6-7").style.left="67.36vw"; 
+                document.getElementById("bloc1-4").style.mixBlendMode="multiply"; 
+                document.getElementById("bloc6-5").style.mixBlendMode="multiply"; document.getElementById("bloc6-6").style.mixBlendMode="multiply"; 
+                document.getElementById("bloc6-7").style.mixBlendMode="multiply"; 
+
+                document.getElementById("bloc6-8").style.transform="rotate(-210deg)"; 
+                document.getElementById("bloc6-9").style.transform="rotate(210deg)"; 
+                document.getElementById("bloc6-10").style.transform="rotate(0deg)"; 
+                document.getElementById("bloc6-8").style.top="20.06vw"; 
+                document.getElementById("bloc6-9").style.top="20.06vw"; 
+                document.getElementById("bloc6-10").style.top="26.79vw"; 
+                document.getElementById("bloc6-8").style.left="79.86vw"; 
+                document.getElementById("bloc6-9").style.left="84.72vw"; 
+                document.getElementById("bloc6-10").style.left="82.08vw"; 
+                document.getElementById("bloc6-8").style.mixBlendMode="multiply"; 
+                document.getElementById("bloc6-9").style.mixBlendMode="multiply"; 
+                document.getElementById("bloc6-10").style.mixBlendMode="multiply"; 
+
+            } else {
+                document.getElementById("bloc5").style.transform="rotate(-70deg)";
+                document.getElementById("bloc5-3").style.transform="rotate(-18deg)";
+                document.getElementById("bloc3").style.transform="rotate(-40deg)";
+                document.getElementById("bloc5").style.top="3.2vw";
+                document.getElementById("bloc5-3").style.top="16.67vw";
+                document.getElementById("bloc3").style.top="-3.47vw";
+                document.getElementById("bloc5").style.left="18.40vw";
+                document.getElementById("bloc5-3").style.left="8.33vw";
+                document.getElementById("bloc3").style.left="53.13vw";
+                document.getElementById("bloc5").style.mixBlendMode="";
+                document.getElementById("bloc5-3").style.mixBlendMode="";
+                document.getElementById("bloc3").style.mixBlendMode=""; 
+
+                document.getElementById("bloc3-2").style.transform="rotate(38deg)"; 
+                document.getElementById("bloc1").style.transform="rotate(-80deg)"; 
+                document.getElementById("bloc6").style.transform="rotate(58deg)"; 
+                document.getElementById("bloc3-2").style.top="41.67vw"; 
+                document.getElementById("bloc2").style.top="0.69vw"; 
+                document.getElementById("bloc2-1").style.top="6.94vw"; 
+                document.getElementById("bloc1").style.top="6.94vw"; 
+                document.getElementById("bloc6").style.top="1.39vw";
+                document.getElementById("bloc3-2").style.left="39.24vw"; 
+                document.getElementById("bloc2").style.left="32.29vw"; 
+                document.getElementById("bloc2-1").style.left="46.18vw"; 
+                document.getElementById("bloc1").style.left="1.04vw"; 
+                document.getElementById("bloc6").style.left="39.24vw";
+                document.getElementById("bloc3-2").style.mixBlendMode=""; 
+                document.getElementById("bloc2").style.mixBlendMode=""; 
+                document.getElementById("bloc2-1").style.mixBlendMode=""; 
+                document.getElementById("bloc1").style.mixBlendMode=""; 
+                document.getElementById("bloc6").style.mixBlendMode=""; 
+
+                document.getElementById("bloc6-1").style.transform="rotate(-50deg)"; 
+                document.getElementById("bloc6-2").style.transform="rotate(18deg)"; 
+                document.getElementById("bloc6-3").style.transform="rotate(-30deg)"; 
+                document.getElementById("bloc3-3").style.top="48.61vw"; 
+                document.getElementById("bloc6-1").style.top="2.08vw"; 
+                document.getElementById("bloc6-2").style.top="47.22vw"; 
+                document.getElementById("bloc6-3").style.top="48.61vw"; 
+                document.getElementById("bloc3-3").style.left="67.01vw"; 
+                document.getElementById("bloc6-1").style.left="87.85vw"; 
+                document.getElementById("bloc6-2").style.left="76.39vw"; 
+                document.getElementById("bloc6-3").style.left="25.35vw"; 
+                document.getElementById("bloc3-3").style.mixBlendMode=""; 
+                document.getElementById("bloc6-1").style.mixBlendMode=""; 
+                document.getElementById("bloc6-2").style.mixBlendMode=""; 
+                document.getElementById("bloc6-3").style.mixBlendMode=""; 
+
+                document.getElementById("bloc1-1").style.transform="rotate(10deg)"; 
+                document.getElementById("bloc1-2").style.transform="rotate(80deg)"; 
+                document.getElementById("bloc1-3").style.transform="rotate(180deg)"; 
+                document.getElementById("bloc2-2").style.top="60vw"; 
+                document.getElementById("bloc1-1").style.top="1.39vw"; 
+                document.getElementById("bloc1-2").style.top="27.78vw"; 
+                document.getElementById("bloc1-3").style.top="41.67vw"; 
+                document.getElementById("bloc2-2").style.left="28.13vw"; 
+                document.getElementById("bloc1-1").style.left="60.07vw"; 
+                document.getElementById("bloc1-2").style.left="0.35vw"; 
+                document.getElementById("bloc1-3").style.left="90.28vw"; 
+                document.getElementById("bloc2-2").style.mixBlendMode=""; 
+                document.getElementById("bloc1-1").style.mixBlendMode=""; 
+                document.getElementById("bloc1-2").style.mixBlendMode=""; 
+                document.getElementById("bloc1-3").style.mixBlendMode=""; 
+
+                document.getElementById("bloc3-1").style.transform="rotate(-18deg)"; 
+                document.getElementById("bloc6-4").style.transform="rotate(-50deg)"; 
+                document.getElementById("bloc3-1").style.top="20.83vw"; 
+                document.getElementById("bloc6-4").style.top="-2.08vw"; 
+                document.getElementById("bloc3-1").style.left="90.28vw"; 
+                document.getElementById("bloc6-4").style.left="-0.69vw"; 
+                document.getElementById("bloc3-1").style.mixBlendMode=""; 
+                document.getElementById("bloc6-4").style.mixBlendMode=""; 
+
+                document.getElementById("bloc1-4").style.transform="rotate(-30deg)"; 
+                document.getElementById("bloc6-5").style.transform="rotate(-30deg)"; 
+                document.getElementById("bloc6-6").style.transform="rotate(-100deg)"; 
+                document.getElementById("bloc6-7").style.transform="rotate(130deg)"; 
+                document.getElementById("bloc1-4").style.top="17.36vw"; 
+                document.getElementById("bloc6-5").style.top="48.61vw"; 
+                document.getElementById("bloc6-6").style.top="-2.08vw"; 
+                document.getElementById("bloc6-7").style.top="52.78vw"; 
+                document.getElementById("bloc1-4").style.left="96.18vw"; 
+                document.getElementById("bloc6-5").style.left="87.85vw"; 
+                document.getElementById("bloc6-6").style.left="97.22vw"; 
+                document.getElementById("bloc6-7").style.left="60.07vw"; 
+                document.getElementById("bloc1-4").style.mixBlendMode=""; 
+                document.getElementById("bloc6-5").style.mixBlendMode=""; document.getElementById("bloc6-6").style.mixBlendMode=""; 
+                document.getElementById("bloc6-7").style.mixBlendMode=""; 
+
+                document.getElementById("bloc6-8").style.transform="rotate(-30deg)"; 
+                document.getElementById("bloc6-9").style.transform="rotate(-30deg)"; 
+                document.getElementById("bloc6-10").style.transform="rotate(-30deg)"; 
+                document.getElementById("bloc6-8").style.top="46.53vw"; 
+                document.getElementById("bloc6-9").style.top="-4.86vw"; 
+                document.getElementById("bloc6-10").style.top="41.67vw"; 
+                document.getElementById("bloc6-8").style.left="-0.21vw"; 
+                document.getElementById("bloc6-9").style.left="74.31vw"; 
+                document.getElementById("bloc6-10").style.left="69.79vw"; 
+                document.getElementById("bloc6-8").style.mixBlendMode=""; 
+                document.getElementById("bloc6-9").style.mixBlendMode=""; 
+                document.getElementById("bloc6-10").style.mixBlendMode=""; 
+
+
+            }
+        }
+
+
+
+    </script>
+
+</html>
+
+<!--
+<div id="part3"><img src="source/ex.png"></div>
+<div id="part4"><img src="source/ex2.png"></div>
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+document.getElementById("menu1").style.display = "block";
+document.getElementById("menu2").style.display = "block";
+document.getElementById("menu3").style.display = "block";
+document.getElementById("menu4").style.display = "block";
+document.getElementById("menu5").style.display = "block";
+} else {
+document.getElementById("menu1").style.display = "none";
+document.getElementById("menu2").style.display = "none";
+document.getElementById("menu3").style.display = "none";
+document.getElementById("menu4").style.display = "none";
+document.getElementById("menu5").style.display = "none";
+}
+}
+
+<div id="texte1"> Treslay est une police de caractères superposables et une conception polychromatique. 
+<br>Le caractère de Treslay est composé de trois couches, combinant six formes différentes. Avec ses trois couches décomposées, on peut créer de nombreuses typographies en superposition. 
+<br><br>« Treslay »  est un nom fusionné de deux mots : « tres » qui signifie « trois » en latin et « layer » qui signifie « couche » en anglais
+</div>
+<div id="texte2"> Treslay est une police de caractères superposables et une conception polychromatique. 
+<br>Le caractère de Treslay est composé de trois couches, combinant six formes différentes. Avec ses trois couches décomposées, on peut créer de nombreuses typographies en superposition. 
+<br><br>« Treslay »  est un nom fusionné de deux mots : « tres » qui signifie « trois » en latin et « layer » qui signifie « couche » en anglais
+</div>
+<div id="texte3"> Treslay est une police de caractères superposables et une conception polychromatique. 
+<br>Le caractère de Treslay est composé de trois couches, combinant six formes différentes. Avec ses trois couches décomposées, on peut créer de nombreuses typographies en superposition. 
+<br><br>« Treslay »  est un nom fusionné de deux mots : « tres » qui signifie « trois » en latin et « layer » qui signifie « couche » en anglais
+</div>
+
+<div id="clic1"> </div>
+<div id="clic2"> </div>
+<div id="clic3"> </div>
+<div id="clic4">⟲</div>
+
+
+
+
+
+var btn1 = document.getElementById("clic1")
+var btn2 = document.getElementById("clic2")
+var btn3 = document.getElementById("clic3")
+var btn4 = document.getElementById("clic4")
+
+btn1.onclick = function() {
+document.getElementById("texte1").style.display = "block";
+}
+btn2.onclick = function() {
+document.getElementById("texte2").style.display = "block";
+}
+btn3.onclick = function() {
+document.getElementById("texte3").style.display = "block";
+}
+btn4.onclick = function() {
+document.getElementById("texte1").style.display = "none";
+document.getElementById("texte2").style.display = "none";
+document.getElementById("texte3").style.display = "none";
+}
+
+
+
+
+
+
+#bloc1 {
+position: absolute;
+top:6.94vw;
+left:2vw;
+transform:rotate(-80deg);
+transition: all 0.4s ease;
+}
+
+#bloc2 {
+position: absolute;
+top:2vw;
+left:32.29vw;
+transition: all 0.4s ease;
+}
+
+#bloc2-2 {
+position: absolute;
+top:2.78vw;
+left:28.13vw;
+transition: all 0.4s ease;
+}
+
+#bloc3 {
+position: absolute;
+top:3.47vw;
+left:53.13vw;
+transform:rotate(-40deg);
+transition: all 0.4s ease;
+}
+#bloc4 {
+position: absolute;
+top:5.56vw;
+left:11.46vw;
+transform:rotate(38deg);
+}
+#bloc5 {
+position: absolute;
+top:4.86vw;
+left:18.40vw;
+transform:rotate(-70deg);
+transition: all 0.4s ease;
+}
+#bloc6 {
+position: absolute;
+top:1.39vw;
+left:39.24vw;
+transform:rotate(58deg);
+transition: all 0.4s ease;
+}
+
+
+#bloc1-1 {
+position: absolute;
+top:1.39vw;
+left:60.07vw;
+transform:rotate(10deg);
+transition: all 0.4s ease;
+}
+
+#bloc2-1 {
+position: absolute;
+top:6.94vw;
+left:46.18vw;
+transition: all 0.4s ease;
+}
+#bloc3-1 {
+position: absolute;
+top:20.83vw;
+left:85vw;
+transform:rotate(-18deg);
+transition: all 0.4s ease;
+}
+#bloc4-1 {
+position: absolute;
+top:0.00vw;
+left:72.92vw;
+transform:rotate(18deg);
+}
+#bloc5-1 {
+position: absolute;
+top:6.94vw;
+left:85vw;
+transform:rotate(40deg);
+}
+#bloc6-1 {
+position: absolute;
+top:2.08vw;
+left:87.85vw;
+transform:rotate(-50deg);
+transition: all 0.4s ease;
+}
+
+#bloc1-2 {
+position: absolute;
+top:27.78vw;
+left:3vw;
+transform:rotate(80deg);
+transition: all 0.4s ease;
+}
+
+#bloc3-2 {
+position: absolute;
+top:41.67vw;
+left:39.24vw;
+transform:rotate(38deg);
+transition: all 0.4s ease;
+}
+#bloc4-2 {
+position: absolute;
+top:34.72vw;
+left:4.51vw;
+transform:rotate(90deg);
+}
+#bloc5-2 {
+position: absolute;
+top:48.61vw;
+left:4.51vw;
+transform:rotate(80deg);
+}
+#bloc6-2 {
+position: absolute;
+top:47.22vw;
+left:76.39vw;
+transform:rotate(18deg);
+transition: all 0.4s ease;
+}
+
+
+#bloc1-3 {
+position: absolute;
+top:41.67vw;
+left:80vw;
+transform:rotate(180deg);
+transition: all 0.4s ease;
+}
+
+#bloc2-3 {
+position: absolute;
+top:20.83vw;
+left:3.47vw;
+}
+
+#bloc2-4 {
+position: absolute;
+top:55.56vw;
+left:52.08vw;
+}
+#bloc3-3 {
+position: absolute;
+top:48.61vw;
+left:67.01vw;
+transition: all 0.4s ease;
+}
+#bloc4-3 {
+position: absolute;
+top:48.61vw;
+left:11.46vw;
+}
+#bloc5-3 {
+position: absolute;
+top:16.67vw;
+left:8.33vw;
+transform:rotate(-18deg);
+transition: all 0.4s ease;
+}
+#bloc6-3 {
+position: absolute;
+top:48.61vw;
+left:25.35vw;
+transform:rotate(-30deg);
+transition: all 0.4s ease;
+}
+
+#bloc6-4 {
+position: absolute;
+top:1vw;
+left:10vw;
+transform:rotate(60deg);
+z-index: -1;
+transition: all 0.4s ease;
+}
+#bloc6-5 {
+position: absolute;
+top:48.61vw;
+left:87.85vw;
+transform:rotate(-30deg);
+transition: all 0.4s ease;
+}
+#bloc6-6 {
+position: absolute;
+top:20vw;
+left:92vw;
+transform:rotate(-100deg);
+transition: all 0.4s ease;
+}
+#bloc6-7 {
+position: absolute;
+top:52.78vw;
+left:60.07vw;
+transform:rotate(130deg);
+transition: all 0.4s ease;
+}
+#bloc6-8 {
+position: absolute;
+top:46.53vw;
+left:2vw;
+transform:rotate(-30deg);
+transition: all 0.4s ease;
+}
+#bloc6-9 {
+position: absolute;
+top:34vw;
+left:94vw;
+transform:rotate(-30deg);
+transition: all 0.4s ease;
+}
+#bloc6-10 {
+position: absolute;
+top:41.67vw;
+left:69.79vw;
+transform:rotate(-30deg);
+transition: all 0.4s ease;
+}
+
+#bloc1-4 {
+position: absolute;
+top:17.36vw;
+left:80vw;
+transform:rotate(-30deg);
+transition: all 0.4s ease;
+}
+
+
+#bloc1 img {
+width:4vw
+}
+#bloc2 img {
+width:2vw
+}
+#bloc2-2 img {
+width:2vw
+}
+#bloc3 img {
+width:2vw
+}
+#bloc4 img {
+width:7vw
+}
+#bloc5 img {
+width:3vw
+}
+#bloc6 img {
+width:3vw
+}
+
+
+#bloc1-1 img {
+width:4vw
+}
+#bloc2-1 img {
+width:2vw
+}
+#bloc3-1 img {
+width:2vw
+}
+#bloc4-1 img {
+width:7vw
+}
+#bloc5-1 img {
+width:3vw
+}
+#bloc6-1 img {
+width:3vw
+}
+
+
+#bloc1-2 img {
+width:4vw
+}
+#bloc2-3 img {
+width:2vw
+}
+#bloc3-2 img {
+width:2vw
+}
+#bloc4-2 img {
+width:7vw
+}
+#bloc5-2 img {
+width:3vw
+}
+#bloc6-2 img {
+width:3vw
+}
+
+
+#bloc1-3 img {
+width:4vw
+}
+#bloc1-4 img {
+width:4vw
+}
+#bloc2-4 img {
+width:2vw
+}
+#bloc3-3 img {
+width:2vw
+}
+#bloc4-3 img {
+width:7vw
+}
+#bloc5-3 img {
+width:3vw
+}
+#bloc6-3 img {
+width:3vw
+}
+
+
+#bloc6-4 img {
+width:3vw
+}
+#bloc6-5 img {
+width:3vw
+}
+#bloc6-6 img {
+width:3vw
+}
+#bloc6-7 img {
+width:3vw
+}
+#bloc6-8 img {
+width:3vw
+}
+#bloc6-9 img {
+width:3vw
+}
+#bloc6-10 img {
+width:3vw
+}
+
+
+--!>
+
+
