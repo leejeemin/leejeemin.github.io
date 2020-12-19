@@ -22,8 +22,8 @@
             }
             .slideshow-container img{
                 width: 100%;}
-            
-            
+
+
             /* Next & previous buttons */
             .prev, .next {
                 cursor: pointer;
@@ -196,7 +196,13 @@
                 opacity: 0;
             }
 
-          
+
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+                .prev, .next,.text {font-size: 11px}
+            }
+
+
 
             @media (max-width:981px) and (orientation: portrait) {
                 #textjm {
@@ -229,7 +235,7 @@
                     top: 70vw;
                     font-size: 10vw;
                 }
-            
+
             }
 
         </style>
@@ -249,6 +255,7 @@
         <div class="slideshow-container">
 
             <div class="mySlides fade">
+                <img src="source/back.png">
                 <div class="text" id="textjm">Designer graphique<br>Communication visuelle, UI design, Typographie. <br>J'explore le langage visuel et le data visualisation.</div>
             </div>
 
@@ -329,11 +336,11 @@
 
     <!--
 
-  
-            /* On smaller screens, decrease text size */
-            @media only screen and (max-width: 300px) {
-                .prev, .next,.text {font-size: 40px}
-            }
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+.prev, .next,.text {font-size: 40px}
+}
 
 function int1(){
 document.getElementById("info-1").style.opacity="1";
