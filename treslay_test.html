@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <title>Lee Jeemin</title>
+        <style>
+            @font-face {
+                font-family: 'superposition-couleur3';
+                src: url('source/font/superposition-couleur-3-webfont.eot');
+                src: url('source/font/superposition-couleur-3-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('source/font/superposition-couleur-3-webfont.woff2') format('woff2'),
+                    url('source/font/superposition-couleur-3-webfont.woff') format('woff'),
+                    url('source/font/superposition-couleur-3-webfont.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'superposition-couleur2';
+                src: url('font/superposition-couleur-2-webfont.eot');
+                src: url('font/superposition-couleur-2-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('font/superposition-couleur-2-webfont.woff2') format('woff2'),
+                    url('font/superposition-couleur-2-webfont.woff') format('woff'),
+                    url('font/superposition-couleur-2-webfont.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'superposition-couleur1';
+                src: url('font/superposition-couleur-1-webfont.eot');
+                src: url('font/superposition-couleur-1-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('font/superposition-couleur-1-webfont.woff2') format('woff2'),
+                    url('font/superposition-couleur-1-webfont.woff') format('woff'),
+                    url('font/superposition-couleur-1-webfont.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'superposition3';
+                src: url('font/superposition-3-webfont.eot');
+                src: url('font/superposition-3-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('font/superposition-3-webfont.woff2') format('woff2'),
+                    url('font/superposition-3-webfont.woff') format('woff'),
+                    url('font/superposition-3-webfont.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'superposition2';
+                src: url('font/superposition-2-webfont.eot');
+                src: url('font/superposition-2-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('font/superposition-2-webfont.woff2') format('woff2'),
+                    url('font/superposition-2-webfont.woff') format('woff'),
+                    url('font/superposition-2-webfont.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'superposition1';
+                src: url('font/superposition-1-webfont.eot');
+                src: url('font/superposition-1-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('font/superposition-1-webfont.woff2') format('woff2'),
+                    url('font/superposition-1-webfont.woff') format('woff'),
+                    url('font/superposition-1-webfont.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+
+            body{
+                margin: 0vw;
+                min-height: 100%;
+                -webkit-perspective : 55.56vw;
+                perspective: 55.56vw;
+                background-color: white;
+                /*    perspective-origin: center;*/
+            }
+
+            #title1
+            { position: absolute;
+                top: 4vw;
+                left: 5vw;
+                color: black;
+                font-family: poppins;
+                font-size:1.4vw;
+                font-weight: 500;
+                cursor:pointer;
+                transition: all 0.2s ease;
+            }
+
+            #title1:hover{
+                color: lightgray;
+            }
+
+
+            #userInput {
+                position: absolute;
+                top: 13vw;
+                left: 5vw;
+                width: 11.5vw;
+                height: 2vw;
+                border-radius:0.8em;
+                font-family: Poppins;
+                //font-weight: bold;
+                font-size:1vw;
+                text-align: center;
+                z-index: 1;
+                color: gray;
+                border: 0.28vw solid whitesmoke;
+                background-color: whitesmoke;
+            }
+
+            #button { position: absolute;
+                display: table; 
+                top: 13vw;
+                left: 18vw;
+                width: 2.6vw;
+                height: 2.6vw;
+                border: 0.15vw solid whitesmoke;
+                font-family: arimo;
+                text-align: center;
+                border-radius:0.8em;
+                font-weight:normal;
+                font-size: 1.04vw;
+                background-color: whitesmoke;
+                //resize: vertical;
+                opacity: 1;
+                z-index: 1;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            #button:hover {
+                background-color: white;
+            }
+
+
+
+            p{display: table-cell; 
+                font-family: arimo;
+                vertical-align: middle;
+                text-align: center;
+                //font-weight:bold;
+                color: darkslategray;
+            }
+
+
+            .button1  { position: absolute;
+                display: table;
+                left: 5vw;
+                width: 12vw;
+                height: 1.8vw;
+                border: 0.1vw solid #ebebec;
+                background-color: white;
+                font-family: Poppins;
+                text-align: center;
+                //font-weight: bold;
+                font-size: 0.9vw;
+                border-radius:0.8em;
+                cursor: pointer;
+                line-height: 2.78vw;
+                transition: all 0.3s ease;
+            }
+
+            #buttoncol  { 
+                top:20vw;
+            }
+
+            #buttonindex { 
+                top:24vw;
+            }
+
+            #buttonopa {
+                top:28vw;
+            }
+
+
+            .back0{
+                position: absolute;
+                top:43vw;
+                width: 2vw;
+                height: 2vw;
+                border: 0.15vw solid #ebebec; 
+                border-radius:0.8em;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .back0:hover{
+                border: 0.1vw solid #ebebec;
+            }
+            #back1{
+                left: 6vw;
+                background-color: white;
+            }
+
+            #back2{
+                left: 9vw;
+                background-color: lightgray;
+            }
+
+            #back3{
+                left: 12vw;
+                background-color: black;
+            }
+
+
+            .text0{
+                position:absolute;
+                top: 10vw;
+                left: 28vw;
+                width: 69.44vw;
+                font-size: 10.42vw;
+                color:black;
+                text-align: left;
+                opacity: 1;
+                line-height: 1.2;
+                z-index: 1;
+                transition: all 0.1s ease;
+            }
+            #text1{
+                font-family:superposition1;
+            }
+            #text2{
+                font-family:superposition2;
+            }
+            #text3{
+                font-family:superposition3;
+            }
+
+
+            .ku{
+                position:absolute;
+                left: 5vw;
+                font-size: 0.85vw;
+                color:black;
+                font-family:poppins;
+                text-align: left;
+                font-weight: 500;
+            }
+            #ku0{
+                top: 11vw;
+            }
+            #ku1{
+                top: 17.7vw;
+            }
+            #ku2{
+                top: 33vw;
+            }
+            #ku3{
+                top: 40vw;
+            }
+
+            #contenu{
+                display: block;
+                position:absolute;
+                top: 35.5vw;
+                left: 28vw;
+                font-family:poppins;
+                font-size: 1.7vw;
+                font-weight: 200;
+                color:black;
+                //font-style: oblique;
+                text-align: left;
+                line-height: 1.9;
+            }
+
+
+            #taille{
+                position:absolute;
+                top:33vw;
+                left: 15vw;
+                font-size: 0.9vw;
+                color:black;
+                font-family:poppins;
+                text-align: left;
+                //transition: all 0.2s ease;
+            }
+
+            .slidecontainer {
+                position: absolute;
+                top:35.5vw;
+                left: 5vw;
+                width: 20vw;
+                //transition: all 0.2s ease;
+            }
+
+            .slider {
+                -webkit-appearance: none;
+                width: 12vw;
+                height: 0.4vw;
+                border-radius: 1vw;
+                background-color:gainsboro;
+                outline: none;
+                opacity: 1;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+            }
+
+            .slider:hover {
+                background-color: gray;
+            }
+
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 1.2vw;
+                height: 1.2vw;
+                border-radius: 50%;
+                border: 0.2vw solid dimgray;
+                background: white;
+                cursor: pointer;
+            }
+
+            .slider::-moz-range-thumb {
+                width: 1vw;
+                height: 1vw;
+                border-radius: 50%;
+                background: black;
+                cursor: pointer;
+            }
+
+
+        </style>
+    </head>
+
+
+    <body>
+
+        <div class="slidecontainer">
+            <input type="range" min="15" max="300" value="50" class="slider" id="myRange" oninput="myFunction(this.value)">
+        </div>
+
+
+        <input type="text" id="userInput" value="Votre texte">
+
+        <div class="back0" id="back1" onclick="back1event()"></div>
+        <div class="back0" id="back2" onclick="back2event()"></div>
+        <div class="back0" id="back3" onclick="back3event()"></div>
+
+        <div id="button" onclick="changeText2()"> <p>❯</p>
+        </div>
+        <div class="button1" id="buttonopa" onclick="opaevent()" onmouseover="mousedown1()" onmouseout="mouseup1()"><p>OPACITÉ</p></div>
+        <div class="button1" id="buttoncol" onclick="colevent()" onmouseover="mousedown2()" onmouseout="mouseup2()"><p>COULEUR</p></div>
+        <div class="button1" id="buttonindex" onclick="indexevent()" onmouseover="mousedown3()" onmouseout="mouseup3()"><p>ORDRE</p></div>
+
+
+        <div class="ku" id="ku0">Texte </div>
+        <div class="ku" id="ku1">Option </div>
+        <div class="ku" id="ku2">Taille</div>
+        <div class="ku" id="ku3">Fond</div>
+
+        <div id="title1" onClick="window.location.reload();">Simulateur Treslay </div>
+
+        <div id="taille"></div>
+
+        <div class="text0" id="text1"> Treslay </div>
+        <div class="text0" id="text2"> Treslay
+        </div>
+        <div class="text0" id="text3"> Treslay
+        </div>    
+
+        <div id="contenu"> Les caractères saisis par l'utilisateur sont appliqués à la police Treslay,<br>l’ordre de position, la couleur et l’opacité des lettres changent<br> de façon aléatoire en fonction de votre choix!
+        </div>
+
+    </body>
+
+
+
+    <script>
+
+        var range = document.getElementById("myRange")
+
+        function myFunction(val) {
+            document.getElementById("text1").style.fontSize = val+"px"; 
+            document.getElementById("text2").style.fontSize = val+"px"; 
+            document.getElementById("text3").style.fontSize = val+"px"; 
+            document.getElementById("taille").innerHTML=range.value+"px";
+        }
+
+
+
+        function back1event(){
+            document.body.style.backgroundColor="white";
+            document.getElementById("ku1").style.color="black";
+            document.getElementById("ku2").style.color="black";
+            document.getElementById("ku3").style.color="black";
+            document.getElementById("title1").style.color="black";
+            document.getElementById("title2").style.color="black";
+            document.getElementById("title3").style.color="black";
+            document.getElementById("taille").style.color="black";}
+        function back2event(){
+            document.body.style.backgroundColor="lightgray";}
+        function back3event(){
+            document.body.style.backgroundColor="black";
+            document.getElementById("ku1").style.color="white";
+            document.getElementById("ku2").style.color="white";
+            document.getElementById("ku3").style.color="white";
+            document.getElementById("title1").style.color="white";
+            document.getElementById("title2").style.color="white";
+            document.getElementById("title3").style.color="white";
+            document.getElementById("taille").style.color="white";}
+
+        function mousedown1(){
+            document.getElementById("buttonopa").style.backgroundColor="ghostwhite";}
+        function mousedown2(){
+            document.getElementById("buttoncol").style.backgroundColor="ghostwhite";}
+        function mousedown3(){
+            document.getElementById("buttonindex").style.backgroundColor="ghostwhite";}
+        function mousedown4(){
+            document.getElementById("buttontypo1").style.backgroundColor="ghostwhite";}
+        function mousedown5(){
+            document.getElementById("buttontypo2").style.backgroundColor="ghostwhite";}
+
+
+        function mouseup1(){
+            document.getElementById("buttonopa").style.backgroundColor="white";}
+        function mouseup2(){
+            document.getElementById("buttoncol").style.backgroundColor="white";}
+        function mouseup3(){
+            document.getElementById("buttonindex").style.backgroundColor="white";}
+        function mouseup4(){
+            document.getElementById("buttontypo1").style.backgroundColor="white";}
+        function mouseup5(){
+            document.getElementById("buttontypo2").style.backgroundColor="white";}
+
+
+
+        function typo1event(){
+            document.getElementById("text1").style.fontFamily="superposition1";
+            document.getElementById("text2").style.fontFamily="superposition2";
+            document.getElementById("text3").style.fontFamily="superposition3";
+
+        }
+
+        function typo2event(){
+            document.getElementById("text1").style.fontFamily="superposition-couleur1";
+            document.getElementById("text2").style.fontFamily="superposition-couleur2";
+            document.getElementById("text3").style.fontFamily="superposition-couleur3";
+        }
+
+        function opaevent() {
+            var opa = new Array("0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1");
+            var indexopa = Math.floor(Math.random()*opa.length);
+
+            document.getElementById("text1").style.opacity=opa[indexopa];
+            indexopa = Math.floor(Math.random()*opa.length);
+            document.getElementById("text2").style.opacity=opa[indexopa];
+            indexopa = Math.floor(Math.random()*opa.length);
+            document.getElementById("text3").style.opacity=opa[indexopa];
+            indexopa = Math.floor(Math.random()*opa.length);
+        }
+
+        function colevent() {
+            var colorcode = "#" + Math.round(Math.random() * 0xffffff).toString(16);
+
+            document.getElementById("text1").style.color=colorcode;
+            colorcode = "#" + Math.round(Math.random() * 0xffffff).toString(16);
+            document.getElementById("text2").style.color=colorcode;
+            colorcode = "#" + Math.round(Math.random() * 0xffffff).toString(16);
+            document.getElementById("text3").style.color=colorcode;
+            colorcode = "#" + Math.round(Math.random() * 0xffffff).toString(16);
+
+        }
+
+        function indexevent() {
+            var arr = new Array("1","2","3");
+            // var index=Math.round(Math.random()*4);    
+            var index = Math.floor(Math.random()*arr.length);
+
+            document.getElementById("text1").style.zIndex=arr[index];
+            index = Math.floor(Math.random()*arr.length);
+            document.getElementById("text2").style.zIndex=arr[index];
+            index = Math.floor(Math.random()*arr.length);
+            document.getElementById("text3").style.zIndex=arr[index];
+            index = Math.floor(Math.random()*arr.length);
+        }
+
+        function changeText2(){
+            var userInput = document.getElementById("userInput").value;
+            document.getElementById("text1").innerHTML = userInput;
+            document.getElementById("text2").innerHTML = userInput;
+            document.getElementById("text3").innerHTML = userInput;
+            document.getElementById("contenu").style.display = "none";
+
+        }
+
+    </script>
+
+</html>
+
+<!--
+
+var slider = document.getElementById("myRange");
+
+var output = document.getElementById("contenu");
+
+output.style.fontSize = slider.value;
+
+slider.oninput = function() {
+output.innerHTML = this.value;
+}
+
+
+<div class="button1" id="buttontypo1" onclick="typo1event()" onmouseover="mousedown4()" onmouseout="mouseup4()"><p>Version.NORMAL</p></div>
+<div class="button1" id="buttontypo2" onclick="typo2event()" onmouseover="mousedown5()" onmouseout="mouseup5()"><p>Version.MOTIF</p></div>
+
+
+/*
+window.addEventListener("click", clic);
+
+function  clic() {
+var arr = new Array("1","2","3");
+// var index=Math.round(Math.random()*4);    
+var index = Math.floor(Math.random()*arr.length);
+
+document.getElementById("text1").style.zIndex=arr[index];
+index = Math.floor(Math.random()*arr.length);
+document.getElementById("text2").style.zIndex=arr[index];
+index = Math.floor(Math.random()*arr.length);
+document.getElementById("text3").style.zIndex=arr[index];
+index = Math.floor(Math.random()*arr.length);
+
+var colorcode = "#" + Math.round(Math.random() * 0xffffff).toString(16);
+
+document.getElementById("text1").style.color=colorcode;
+colorcode = "#" + Math.round(Math.random() * 0xffffff).toString(16);
+document.getElementById("text2").style.color=colorcode;
+colorcode = "#" + Math.round(Math.random() * 0xffffff).toString(16);
+document.getElementById("text3").style.color=colorcode;
+colorcode = "#" + Math.round(Math.random() * 0xffffff).toString(16);
+
+
+var opa = new Array("0.2","0.4","0.6","0.8","1");
+var indexopa = Math.floor(Math.random()*arr.length);
+
+document.getElementById("text1").style.opacity=opa[indexopa];
+index = Math.floor(Math.random()*arr.length);
+document.getElementById("text2").style.opacity=opa[indexopa];
+index = Math.floor(Math.random()*arr.length);
+document.getElementById("text3").style.opacity=opa[indexopa];
+index = Math.floor(Math.random()*arr.length);
+
+}
+
+*/
+
+
+<!--  <p>Welcome to the site <b id='boldStuff2'>dude</b> </p> 
+<input type='text' id='userInput' value='Enter Text Here' />
+<input type='button' onclick='changeText2()' value='Change Text'/>
+
+
+<p id="title">Ecrivez votre mot</p>
+
+-->
