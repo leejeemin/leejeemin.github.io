@@ -8,48 +8,63 @@
         <title>Lee Jeemin</title>
         <style>
 
-            * {box-sizing: border-box}
-            body {font-family: Verdana, sans-serif; margin:0}
-            .mySlides {display: none}
-            img {vertical-align: middle; opacity: 0.9;}
 
-            /* Slideshow container */
-            .slideshow-container {
-                max-width: 100%;
-                position: relative;
-                margin: auto;
+            /* Content */
+            .content {
+                //background-color:whitesmoke;
+                padding: 8vw;}
 
-            }
-            .slideshow-container img{
-                width: 100%;}
-
-
-            /* Next & previous buttons */
-            .prev, .next {
+            .content img{
                 cursor: pointer;
-                position: absolute;
-                top: 55%;
-                width: auto;
-                padding: 2vw;
-                margin-top: -9vw;
-                font-family: poppins;
+                transition: all 0.3s ease;
+            }
+            .content img:hover{
+                opacity: 0.7;}
+
+            .content p{
+                font-size: 1.6vw;
+                font-family: Poppins;
+                font-weight: 100;
                 color: black;
-                font-weight: 200;
-                font-size: 3vw;
-                transition: 0.1s ease;
-                //border-radius: 1vw;
-                user-select: none;
+                text-align: center;
+                letter-spacing: 0.2vw;
+                z-index: 4;
+                opacity: 0;
+                transition: all 0.3s ease;
             }
 
-            /* Position the "next button" to the right */
-            .next {
-                right: 0;
-                border-radius: 3px 0 0 3px;
+            .content:hover p{
+                opacity: 1;}
+
+
+            /* The "show" class is added to the filtered elements */
+            .show {
+                display: block;
+            }
+            .row {
+                margin: 10px -16px;
             }
 
-            /* On hover, add a black background color with a little bit see-through */
-            .prev:hover, .next:hover {
-                background-color: rgba(0,0,0,0.1);
+            /* Add padding BETWEEN each column */
+            .row,
+            .row > .column {
+                padding-left: 8px;
+                padding-right: 8px;
+                padding-bottom: 5px;
+            }
+
+            /* Create three equal columns that floats next to each other */
+            .column {
+                float: left;
+                width: 45%;
+                display: none; /* Hide all elements by default */
+            }
+
+            /* Clear floats after rows */ 
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
             }
 
             /* Caption text */
@@ -82,23 +97,6 @@
                 cursor:default;
             }
 
-            /* Fading animation */
-            .fade {
-                -webkit-animation-name: fade;
-                -webkit-animation-duration: 1.5s;
-                animation-name: fade;
-                animation-duration: 1.5s;
-            }
-
-            @-webkit-keyframes fade {
-                from {opacity: .4} 
-                to {opacity: 1}
-            }
-
-            @keyframes fade {
-                from {opacity: .4} 
-                to {opacity: 1}
-            }
 
             body{
                 background-color: white;
@@ -175,7 +173,7 @@
                 color: black;
                 font-weight: 400;
                 z-index: 5;
-                //cursor: cell;
+               cursor: cell;
                 transition: all 0.3s ease;
             }
 
@@ -203,8 +201,10 @@
             }
 
 
-
             @media (max-width:981px) and (orientation: portrait) {
+                .column {width: 95%;}
+                .content p{font-size: 2.3vw;opacity: 1;}
+
                 #textjm {
                     font-size: 6vw;
                     top:40vw;
@@ -248,95 +248,145 @@
         <div id="backinfo"></div>
         <div id="logo" onclick="window.location.href='main.html'"><img src="source/jmlogo.png"></div>
 
-        
+
         <div id="info" onmouseover="int1()" onmouseout="int2()">LEE Jeemin &emsp;&emsp;&emsp;&emsp;jeemin.design@gmail.com</div>
         <div id="info-1">Designer graphique - <br>Communication visuelle,<br>UI design, Typographie. J'explore le langage visuel et le data visualisation. </div>
 
 
-        <div class="slideshow-container">
-
-            <div class="mySlides fade">
-                <img src="source/back.png">
-                <div class="text" id="textjm">Designer graphique<br>Communication visuelle, UI design, Typographie. <br>J'explore le langage visuel et le data visualisation.</div>
-            </div>
-
-            <div class="mySlides fade">
-                <img src="source/valeurs-interface2.png">
-                <div class="text" onclick="window.location.href='valeurs.html'">Les Valeurs Humaines</div>
-            </div>
-
-            <div class="mySlides fade">
-                <img src="source/maintreslay.png">
-                <div class="text" onclick="window.location.href='treslay.html'">Tresaly</div>
-            </div>
-
-            <div class="mySlides fade">
-                <img src="source/mainsyntaxe.png">
-                <div class="text" onclick="window.location.href='syntaxe.html'">Structure de la syntaxe</div>
-            </div>
-
-            <div class="mySlides fade">
-                <img src="source/mainatis.png">
-                <div class="text" onclick="window.location.href='bota.html'">Typeface ; atis</div>
-            </div>
-
-            <div class="mySlides fade">
-                <img src="source/maintan.png">
-                <div class="text" onclick="window.location.href='tancon.html'">Typeface ; Tangram</div>
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)"><</a>
-                <a class="next" onclick="plusSlides(1)">></a>
-
+        <!-- Portfolio Gallery Grid -->
+        <div class="row">
+            
+            <div>
+                <div class="content">
+                    <img src="source/valeurs-interface2.png" onclick="window.location.href='valeurs.html'" style="width:100%">
+                    <p>Les Valeurs Humaines</p>
                 </div>
+            </div>
+            <div>
+                <div class="content">
+                    <img src="source/maintreslay.png" onclick="window.location.href='treslay.html'" style="width:100%">
+                    <p>Treslay</p>
+                </div>
+            </div>
+            <div>
+                <div class="content">
+                    <img src="source/mainsyntaxe.png" onclick="window.location.href='syntaxe.html'" style="width:100%">
+                    <p>Structure de la syntaxe</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="content">
+                    <img src="source/mainatis.png" onclick="window.location.href='bota.html'" style="width:100%">
+                    <p>Typeface ; atis</p>
+                </div>
+            </div>
+            <div>
+                <div class="content">
+                    <img src="source/maintan.png" onclick="window.location.href='tancon.html'" style="width:100%">
+                    <p>Typeface ; Tangram</p>
+                </div>
+            </div>
+
+
+            <!-- END GRID -->
+        </div>
 
 
 
 
-            </body>
+    </body>
 
 
 
-        <script>
+    <script>
+
+        function int1(){
+            document.getElementById("info-1").style.opacity="1";
+        }
+
+        function int2(){
+            document.getElementById("info-1").style.opacity="0";
+        }
+
+
+    </script>
+
+</html>
+
+<!--
 
 
 
-            function scrollWin() {
-                window.scrollTo(0,0);
-            }
+function scrollWin() {
+window.scrollTo(0,0);
+}
 
-            var slideIndex = 1;
-            showSlides(slideIndex);
+var slideIndex = 1;
+showSlides(slideIndex);
 
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
 
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
 
-            function showSlides(n) {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                if (n > slides.length) {slideIndex = 1}    
-                if (n < 1) {slideIndex = slides.length}
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";  
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block";  
-                dots[slideIndex-1].className += " active";
-            }
-        </script>
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}    
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";  
+}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";  
+dots[slideIndex-1].className += " active";
+}
 
-        </html>
 
-    <!--
 
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+<img src="source/back.png">
+<div class="text" id="textjm">Designer graphique<br>Communication visuelle, UI design, Typographie. <br>J'explore le langage visuel et le data visualisation.</div>
+</div>
+
+<div class="mySlides fade">
+<img src="source/valeurs-interface2.png">
+<div class="text" onclick="window.location.href='valeurs.html'">Les Valeurs Humaines</div>
+</div>
+
+<div class="mySlides fade">
+<img src="source/maintreslay.png">
+<div class="text" onclick="window.location.href='treslay.html'">Tresaly</div>
+</div>
+
+<div class="mySlides fade">
+<img src="source/mainsyntaxe.png">
+<div class="text" onclick="window.location.href='syntaxe.html'">Structure de la syntaxe</div>
+</div>
+
+<div class="mySlides fade">
+<img src="source/mainatis.png">
+<div class="text" onclick="window.location.href='bota.html'">Typeface ; atis</div>
+</div>
+
+<div class="mySlides fade">
+<img src="source/maintan.png">
+<div class="text" onclick="window.location.href='tancon.html'">Typeface ; Tangram</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)"><</a>
+<a class="next" onclick="plusSlides(1)">></a>
+
+</div>
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
