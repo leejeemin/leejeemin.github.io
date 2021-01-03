@@ -124,6 +124,21 @@
             #logo img{
                 width: 4.5vw;
             }
+#cv{
+                position: fixed;
+                top: 2vw;
+                left: 65vw;
+                font-family:Poppins;
+                font-size: 1vw;
+                color: gray;
+                font-weight: 600;
+                z-index: 5;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                // border:solid 1px gray;
+                //padding: 1vw;
+            }
+            #cv:hover{color:royalblue;}
 
             #info{
                 position: fixed;
@@ -396,6 +411,65 @@
                 width: 100vw;
             }
             
+            
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+                .prev, .next,.text {font-size: 11px}
+            }
+
+
+            @media (max-width:981px) and (orientation: portrait) {
+                .column {width: 95%;}
+                .content p{font-size: 2.3vw;opacity: 1;}
+
+                #textjm {
+                    font-size: 6vw;
+                    top:40vw;
+                }
+                .text {
+                    top:55vw;
+                    font-size:7vw;
+                    margin: 5vw;
+                    width: 90vw;
+                }
+
+                #logo{
+                    position: fixed;
+                    top: 7vw;
+                    left: 6vw;
+                }
+                #logo img{
+                    width: 15vw;
+                }
+
+                #cv{
+                    top: 5vw;
+                    left:85vw;
+                    font-size: 4vw;
+                    font-weight: 300;
+                }
+                #info{
+                    top: 5vw;
+                    left:30vw;
+                    width: 30vw;
+                    font-size: 3vw;
+                    font-weight: 300;
+                }
+                
+                #info-1{
+                    top: 20vw;
+                    left:30vw;
+                    width:50vw;
+                    font-size: 4vw;
+                    font-weight: 400;
+                }
+                .prev, .next {
+                    top: 70vw;
+                    font-size: 10vw;
+                }
+
+            }
+            
         </style>
 
 
@@ -405,6 +479,8 @@
     <body>
         <div id="backinfo"></div>
         <div id="logo" onclick="window.location.href='main.html'"><img src="source/jmlogo.png" ></div>
+        
+        <div id="cv" onclick="window.location.href='CV-leejeemin-fr.pdf'">CV</div>
         <div id="info" onmouseover="int1()" onmouseout="int2()">LEE Jeemin &emsp;&emsp;&emsp;&emsp;jeemin.design@gmail.com</div>
         <div id="info-1">Designer graphique - <br>Communication visuelle,<br>UI design, Typographie. J'explore le langage visuel et le data visualisation. </div>
 
